@@ -2,5 +2,10 @@
 title: Welcome to my blog!
 ---
 
-> path: index.md  
-> content: Hello World (index.md)
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
